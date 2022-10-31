@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'AppCoder.apps.AppcoderConfig',
     'ejemplo.apps.EjemploConfig',
+    'blog.apps.BlogConfig',
     
 ]
 
