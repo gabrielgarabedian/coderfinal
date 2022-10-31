@@ -9,5 +9,16 @@
 <body>
     HOLA ESTO ES UN SALUDO DESDE UN TEMPLATE!!!!
     DE Ejemplo
+    {{nombre}} {{apellido}}
+    <br>
+    {%for nota in notas%}
+        {% if nota > 5%}
+            <p style="color:blue">{{nota}}</p>
+        {% else %}
+            <p style="color:red">{{nota}}</p>
+        {% endif %}
+           
+        <br>
+    {% endfor %}
 </body>
 </html>
