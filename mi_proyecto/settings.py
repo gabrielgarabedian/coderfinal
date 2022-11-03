@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'AppCoder.apps.AppcoderConfig',
     'ejemplo.apps.EjemploConfig',
     'blog.apps.BlogConfig',
-    'panel_familia.apps.PanelFamiliaConfig'
+    'panel_familia.apps.PanelFamiliaConfig',
+    'tienda.apps.TiendaConfig'
     
 ]
 
