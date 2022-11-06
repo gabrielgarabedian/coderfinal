@@ -27,6 +27,7 @@ class Clientes(models.Model):
 class Empleado(models.Model):
     nombre_completo = models.CharField(max_length=70)
     domicilio =models.CharField(max_length=70)
+    telefono= models.IntegerField(blank=True,null=True)
     dni= models.CharField(max_length=70)
     cargo = models.CharField(max_length=70)
     sucursal = models.CharField(max_length=70)
@@ -46,4 +47,13 @@ class Producto(models.Model):
     
     def __stre__(self):
         return f"Articulo:{self.articulo} - id.Fabricante:{self.id_fab} - P.v.P.:{self.pvp}"
+  
+class fabricante(models.Model):   
+    fabrica= models.CharField(max_length=30)
+    dom_deposito= models.CharField(max_length=60)
+    tel_dep= models.IntegerField(blank=True,null=True)
+    mail_pedidos=models.EmailField(max_length=200)
     
+    def __str__(self):
+        return f"Id: {self.id} - fabricante: {self.fabrica} - pedidos al: {self.mail_pedidos}"
+     
