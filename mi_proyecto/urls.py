@@ -38,6 +38,8 @@ urlpatterns = [
     path('mi-familia/alta', AltaFamiliar.as_view()),
     path('panel-familia/', include('panel_familia.urls')),
     path('blog/', include('blog.urls')),
-    path('tienda/', include('tienda.urls') )
+    path('tienda/', include('tienda.urls')),
+    path('rutina/', include('rutina.urls')),
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
