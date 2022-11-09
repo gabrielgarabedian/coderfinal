@@ -1,5 +1,5 @@
 from django.urls import path
-from rutina.views import *
+from tienda.views import *
 
 urlpatterns = [
      path('', index, name="index-rutina"),
