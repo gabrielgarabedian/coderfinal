@@ -4,6 +4,8 @@ class Configuracion(models.Model):
     nombre_rutina=models.CharField(max_length=50)
     titulo_cabecera=models.CharField(max_length=70, default='')
     construido=models.CharField(max_length=70)
+    titulo_secundario=models.CharField(max_length=50)
+    
 
 class Rutina(models.Model):
     nombre_rutina= models.CharField(max_length=50)
