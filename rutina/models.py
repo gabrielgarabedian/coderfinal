@@ -1,7 +1,14 @@
 from django.db import models
 
 class Configuracion(models.Model):
-    nombre_rutina=models.CharField(max_length=50)
+    nombre_de_pagina=models.CharField(max_length=25)
+    nombre_del_lugar=models.CharField(max_length=50)
+    Boton_menu_1=models.CharField(max_length=15)
+    Boton_menu_2=models.CharField(max_length=15)
+    Boton_menu_3=models.CharField(max_length=15)
+    Boton_menu_4=models.CharField(max_length=15)
+    Boton_menu_5=models.CharField(max_length=15)
+    Boton_menu_6=models.CharField(max_length=15)
     titulo_cabecera=models.CharField(max_length=70, default='')
     construido=models.CharField(max_length=70)
     titulo_secundario=models.CharField(max_length=50)
