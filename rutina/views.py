@@ -9,7 +9,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from rutina.models import Rutina, Configuracion
 
-#ef index(request):
+#def index(request):
 
     #return render(request, 'rutina/index.html')
 
@@ -55,6 +55,9 @@ class UpdateRutina(UpdateView):
     model=Rutina
     fields=['nombre_rutina', 'short_content', 'content']
     success_url = reverse_lazy("lista-de-rutina")
+
+def horarios(request):
+    return render(request, 'rutina/horarios.html')
     
     
 
