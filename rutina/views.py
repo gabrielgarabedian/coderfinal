@@ -53,7 +53,7 @@ class DeleteRutina(DeleteView):
 
 class UpdateRutina(UpdateView):
     model=Rutina
-    fields=['nombre_rutina', 'short_content', 'content','image','coach']
+    fields=['nombre_rutina', 'short_content', 'content']
     success_url = reverse_lazy("lista-de-rutina")
     
     
