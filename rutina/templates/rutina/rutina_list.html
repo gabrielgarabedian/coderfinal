@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    {% for rutina in object_list %}
+        <li>{{rutina}} 
+            <a href="{% url 'delete-rutina' rutina.id  %}">-Borrar-</a>
+            <a href="{% url 'update-rutina' rutina.id  %}">-Actulizar-</a>
+           
+        </li>
+    {% endfor %}
+    </ul>
+    
+
+    <a href="{% url 'crear-rutina'%}">Crear una nueva Rutina de entrenamiento</a>
+
+</body>
+</html>
