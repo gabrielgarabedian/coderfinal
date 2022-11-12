@@ -58,6 +58,9 @@ class UpdateRutina(UpdateView):
 
 def horarios(request):
     return render(request, 'rutina/horarios.html')
+
+def nosotros(request):
+    return render(request, 'rutina/nosotros.html')
     
     
 

@@ -10,5 +10,7 @@ urlpatterns = [
      path('delete-rutina/<int:pk>/', DeleteRutina.as_view(), name= "delete-rutina"),
      path('detail-rutina/<int:pk>/', DetailRutina.as_view(), name= "detail-rutina"),
      path('update-rutina/<int:pk>/', UpdateRutina.as_view(), name="update-rutina"),
-     path('horarios/', horarios, name="horarios")
+     path('horarios/', horarios, name="horarios"),
+     path('nosotros/', nosotros, name="nosotros"),
+     
      ]

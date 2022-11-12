@@ -1,7 +1,17 @@
-<h1>Login del sitio Rutinas</h1>
+{% extends 'rutina/index.html' %}
+{% block titulo %}
+
+Login
+
+{% endblock titulo %}
+
+{% block contenido %}
+
+<h1>GYM Carrey - Ingreso al sitio</h1>
 
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit">Login</button>
+    <button type="submit">Ingresar</button>
 </form>
+{% endblock contenido %}

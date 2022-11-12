@@ -19,9 +19,9 @@
             <div class="border-end bg-white" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light">{% block nombre_del_lugar %} GYM Carrey {% endblock nombre_del_lugar %}</div>
                 <div class="list-group list-group-flush">   
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% block boton_1 %} Login {% endblock boton_1 %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{%url 'rutina-login' %}">{% block boton_1 %} Login {% endblock boton_1 %}</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'horarios' %}">{% block boton_2 %} Horarios {% endblock boton_2 %}</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% block boton_3%} Rutinas {% endblock boton_3 %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'lista-de-rutina' %}">{% block boton_3%} Rutinas {% endblock boton_3 %}</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% block boton_4 %} Alimentacion {% endblock boton_4 %}</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% block boton_5 %} Perfil {% endblock boton_5 %}</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% block boton_6 %} Clientes {% endblock boton_6 %}</a>
@@ -37,8 +37,8 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="#!">{{configuracion.boton_cabecera_1}}</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#!">{{configuracion.boton_cabecera_2}}</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="{% url 'nosotros' %}">{% block boton_cabecera_1 %} Nosotros {% endblock boton_cabecera_1%}</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index-rutina' %}">{% block boton_cabecera_2 %} Inicio {% endblock boton_cabecera_2%}</a></li>
                                 <li class="nav-item dropdown">
                                 </li>
                             </ul>
@@ -48,19 +48,15 @@
                 <!-- Page content-->
                 <div class="container-fluid">
                     {% block contenido %}
-                    <h1 class="mt-4">Simple Sidebar</h1>
-                    <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                    <h1 class="mt-4">GYM Carrey</h1>
+                    <p>solución integral que te facilitan los horarios de atencion, rutinas de entrenamiento, planes de alimentacion y el control de socios de forma rápida e intuitiva. Sin complicaciones y con la mejor experiencia para tus clientes.</p>
                     <p>
-                        Make sure to keep all page content within the
-                        <code>#page-content-wrapper</code>
-                        . The top navbar is optional, and just for demonstration. Just create an element with the
-                        <code>#sidebarToggle</code>
-                        ID which will toggle the menu when clicked.
+                        Entrenar y la salud van de la mano.
                     </p>
                 </div>
             </div>
         </div>
-        {% endblock contenido %}
+                    {% endblock contenido %}
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
