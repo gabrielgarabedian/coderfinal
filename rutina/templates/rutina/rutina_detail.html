@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {{object}}
-    <img height="255" scr="{{ objetct.image.url }}"/>
+{% extends 'rutina/index.html' %}
+{% block titulo %}
 
-    <a href="{% url 'lista-de-rutina' %}">Volver a las rutinas</a>
+{{object.nombre_rutina}}
 
-
-</body>
-</html>
+{% endblock titulo %}
+<div class="d-flex justify-content-center">
+    <h1>{{object.nombre_rutina}}</h1>
+</div>
+<div class="d-flex justify-content-center">
+    <h5> publicado: {{object.date_published}} </h5>
+</div>
+{% block contenido %}
+<div class="d-flex justify-content-center">
+    {% if object.image_rutina %}
+    <img height="255" src="{{ object.image_rutina.url }}" />
+    {% else %}
+    <img height="255" src="https://dummyimage.com/255x255/dee2e6/6c757d.jpg" alt="...">
+    {% endif %}
+</div>
+<div class="container text-wrap py-1 my-1" style="word-break: break-all;">
+    
+        {{object.content}}
+    
+</div>
+<a href="{% url 'lista-de-rutina' %}">Volver a las rutinas</a
+    {% endblock contenido %}

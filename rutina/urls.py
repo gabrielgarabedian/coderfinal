@@ -10,4 +10,12 @@ urlpatterns = [
      path('delete-rutina/<int:pk>/', DeleteRutina.as_view(), name= "delete-rutina"),
      path('detail-rutina/<int:pk>/', DetailRutina.as_view(), name= "detail-rutina"),
      path('update-rutina/<int:pk>/', UpdateRutina.as_view(), name="update-rutina"),
+     path('horarios/', horarios, name="horarios"),
+     path('nosotros/', nosotros, name="nosotros"),
+     path('rutinas-post/', rutinas_post, name="rutinas-post"),
+     path('search-by-name-rutina/', SearchRutinaByName.as_view(), name="search-by-name-rutina"),
+
+    
+ 
+     
      ]
