@@ -1,5 +1,5 @@
 {% extends 'rutina/index.html' %}
-
+{% block titulo %} Rutinas{% endblock titulo%}
 {% block contenido %}
 <div class="container">
     <div class="text-center my-5">
@@ -13,12 +13,12 @@
             <!-- Featured blog post-->
             <div class="card mb-4">
                 {% if  rutinas.0 %}
-                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.0.image.url }}" alt="..." /></a>
+                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.0.image_rutina.url }}" alt="..." /></a>
                 <div class="card-body">
                     <div class="small text-muted">{{rutina.0.date_published}}</div>
                     <h2 class="card-title">{{rutina.0.nombre_rutina}}</h2>
                     <p class="card-text">{{rutina.0.short_content}}</p>
-                    <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.0.id %}">Read more →</a>
+                    <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.0.id %}">Leer más →</a>
                 </div>
                 {% endif %}
             </div>
@@ -33,7 +33,7 @@
                             <div class="small text-muted">{{rutina.1.date_published}}</div>
                             <h2 class="card-title">{{rutina.1.nombre_rutina}}</h2>
                             <p class="card-text">{{rutina.1.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.1.id %}">Read more →</a>
+                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.1.id %}">Leer más →</a>
                         </div>
                     </div>
                     {% endif %}
@@ -45,7 +45,7 @@
                             <div class="small text-muted">{{rutina.2.date_published}}</div>
                             <h2 class="card-title">{{rutina.2.nombre_rutina}}</h2>
                             <p class="card-text">{{rutina.2.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.2.id %}">Read more →</a>
+                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.2.id %}">Leer más →</a>
                         </div>
                     </div>
                     {% endif %}
@@ -59,7 +59,7 @@
                             <div class="small text-muted">{{rutina.3.date_published}}</div>
                             <h2 class="card-title">{{rutina.3.nombre_rutina}}</h2>
                             <p class="card-text">{{rutina.3.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.3.id %}">Read more →</a>
+                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.3.id %}">Leer más →</a>
                         </div>
                     </div>
                     {% endif %}
@@ -71,7 +71,7 @@
                             <div class="small text-muted">{{rutina.4.date_published}}</div>
                             <h2 class="card-title">{{rutina.4.nombre_rutina}}</h2>
                             <p class="card-text">{{rutina.4.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.4.id %}">Read more →</a>
+                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.4.id %}">Leer más →</a>
                         </div>
                         {% endif %}
                     </div>

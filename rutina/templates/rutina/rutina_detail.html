@@ -1,15 +1,27 @@
 {% extends 'rutina/index.html' %}
 {% block titulo %}
 
-Login
+{{object.nombre_rutina}}
 
 {% endblock titulo %}
-
+<div class="d-flex justify-content-center">
+    <h1>{{object.nombre_rutina}}</h1>
+</div>
+<div class="d-flex justify-content-center">
+    <h5> publicado: {{object.date_published}} </h5>
+</div>
 {% block contenido %}
-    {{object}}
-    <img height="255" scr="{{ objetct.image.url }}"/>
-
-    <a href="{% url 'lista-de-rutina' %}">Volver a las rutinas</a>
-
-
+<div class="d-flex justify-content-center">
+    {% if object.image_rutina %}
+    <img height="255" src="{{ object.image_rutina.url }}" />
+    {% else %}
+    <img height="255" src="https://dummyimage.com/255x255/dee2e6/6c757d.jpg" alt="...">
+    {% endif %}
+</div>
+<div class="container text-wrap py-1 my-1" style="word-break: break-all;">
+    
+        {{object.content}}
+    
+</div>
+<a href="{% url 'lista-de-rutina' %}">Volver a las rutinas</a
     {% endblock contenido %}
