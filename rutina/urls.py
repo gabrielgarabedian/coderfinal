@@ -13,7 +13,7 @@ urlpatterns = [
      path('horarios/', horarios, name="horarios"),
      path('nosotros/', nosotros, name="nosotros"),
      path('rutinas-post/', rutinas_post, name="rutinas-post"),
-     path('search-by-name/', SearchRutinaByName.as_view(), name="search-by-name-rutina"),
+     path('search-by-name-rutina/', SearchRutinaByName.as_view(), name="search-by-name-rutina"),
 
     
  

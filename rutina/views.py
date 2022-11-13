@@ -63,7 +63,9 @@ def nosotros(request):
     return render(request, 'rutina/nosotros.html')
 
 def rutinas_post(request):
+    rutinas = Rutina.objects.all()
     rutinas = Rutina.objects.order_by('-date_published').all()
+
     return render(request, 'rutina/rutinas_post.html', {"rutina": rutinas})
 
 

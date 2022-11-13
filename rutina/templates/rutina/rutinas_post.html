@@ -1,5 +1,12 @@
 {% extends 'rutina/index.html' %}
 
+{% block contenido %}
+<div class="container">
+    <div class="text-center my-5">
+        <h1 class="fw-bolder">GYM Carrey</h1>
+        <p class="lead mb-0">Rutinas</p>
+    </div>
+</div>
 <div class="row">
         <!-- Blog entries-->
         <div class="col-lg-8">
@@ -75,12 +82,12 @@
         <div class="col-lg-4">
             <!-- Search widget-->
             <div class="card mb-4">
-                <div class="card-header">Search</div>
+                <div class="card-header">Buscar</div>
                 <div class="card-body">
                     <form action="{% url 'search-by-name-rutina' %}" method="get">
                         {% csrf_token %}
-                        <input type="search" name="post-title">
-                        <input type="submit" value="go">
+                        <input type="search" name="rutina_nombre_rutina">
+                        <input type="submit" value="buscar">
                     </form>
                 </div>
             </div>
@@ -113,3 +120,4 @@
             </div>
         </div>
     </div>
+    {% endblock contenido %}
