@@ -27,3 +27,8 @@ class Alimentacion(models.Model):
     
     def __str__(self):
         return f"Receta: {self.id} - Alimentacion: {self.title} "
+    
+class Grilla(models.Model):
+    dias_de=models.CharField(max_length=50)
+    horario_de=models.CharField(max_length=40)
+    feriados_de=models.CharField(max_length=50)

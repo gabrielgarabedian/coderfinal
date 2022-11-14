@@ -1,6 +1,6 @@
 from django.contrib import admin
-from rutina.models import Rutina,Configuracion
+from rutina.models import Rutina,Configuracion,Grilla
 
 
 admin.site.register(Rutina)
-admin.site.register(Configuracion)
+admin.site.register(Grilla)

@@ -7,13 +7,13 @@ from django.views import View
 from django.views.generic import ListView , CreateView, DeleteView, UpdateView, DetailView
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from rutina.models import Rutina, Configuracion
+from rutina.models import Rutina, Configuracion, Grilla
 
 #def index(request):
 
     #return render(request, 'rutina/index.html')
 
-
+@login_required
 def index(request):
     configuracion = Configuracion.objects.first()
     return render(request, 'rutina/index.html',{'configuracion':configuracion})
@@ -46,7 +46,7 @@ class CreateRutina(CreateView):
     success_url = reverse_lazy("lista-de-rutina")
 
 
-class SearchRutinaByName(LoginRequiredMixin,ListView):
+class SearchRutinaByName(ListView):
     def get_queryset(self):
         rutina_nombre_rutina = self.request.GET.get('rutina_nombre_rutina')
         return Rutina.objects.filter(nombre_rutina__icontains=rutina_nombre_rutina)
@@ -64,7 +64,8 @@ class UpdateRutina(UpdateView):
     success_url = reverse_lazy("lista-de-rutina")
 
 def horarios(request):
-    return render(request, 'rutina/horarios.html')
+    grilla = Grilla.objects.first()
+    return render(request, 'rutina/horarios.html',{'grilla':grilla})
 
 def nosotros(request):
     return render(request, 'rutina/nosotros.html')

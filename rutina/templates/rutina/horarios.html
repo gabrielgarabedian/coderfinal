@@ -1,10 +1,13 @@
 {% extends 'rutina/index.html' %}
 {% block titulo %}
 
-Horarios
+Dias Y Horarios
 
 {% endblock titulo %}
 
 {% block contenido %}
-<h1 class="mt-4">Horarios</h1>
+<h2 class="mt-4">Abierto de {{grilla.dias_de}} de  {{grilla.horario_de}}</h2>
+
+<h2 class="mt-4">feriados {{grilla.feriados_de}}</h2>
+
 {% endblock contenido %}

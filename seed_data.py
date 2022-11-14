@@ -16,13 +16,15 @@ print("Se cargo con exito los post de prueba")
 from rutina.models import Rutina
 
 
-Rutina(nombre_rutina= "Rutina Hipertrofia para mujer", short_content="Se trabaja el cuerpo completo, 3 Veces a la semana, ", content="""gluteos/hombros series rep peso
-hip thrust 4 10 10 kg
-gluteos en polea 3 12 15 kg
-prensa de costado 3 8 10 kg
-abductores en maquina 3 12 40 kg
-hombros mancuernas 3 10 5 kg
-vuelos laterales manc 3 12 3 kg
+Rutina(nombre_rutina= "Rutina Hipertrofia para mujer", 
+       short_content="Se trabaja el cuerpo completo, 3 Veces a la semana, ",
+       content="""gluteos/hombros series rep peso
+                  hip thrust 4 10 10 kg
+                  gluteos en polea 3 12 15 kg
+                   prensa de costado 3 8 10 kg
+                   abductores en maquina 3 12 40 kg
+                   hombros mancuernas 3 10 5 kg
+                  vuelos laterales manc 3 12 3 kg
 frontal con disco + 3 10 5 kg
 posterior con manc 3 12 3 kg
 cuadriceps/dorsales series rep peso
@@ -30,7 +32,7 @@ sentadilla libre 3 10 10kg
 cuadriceps maquina 3 12 30 kg
 prensa 3 10 45 kg
 estocada caminando 3 16 3 kg
-tiron al pecho 3 10 25 kg
+tiron al pecho 3 10 25 kg"
 remo en polea 3 10 20 kg
 depresores en polea 3 12 15 kg
 remo con mancuerna 3 10 7 kg
