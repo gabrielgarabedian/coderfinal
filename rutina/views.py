@@ -13,7 +13,7 @@ from rutina.models import Rutina, Configuracion
 
     #return render(request, 'rutina/index.html')
 
-@login_required
+
 def index(request):
     configuracion = Configuracion.objects.first()
     return render(request, 'rutina/index.html',{'configuracion':configuracion})
@@ -25,11 +25,17 @@ class RutinaLogin(LoginView):
 
 class RutinaLogout(LogoutView):
     template_name = 'rutina/rutina_logout.html'
+    next_page = reverse_lazy("index-rutina")
     
-#class ProfileUpdate(UpdateView):
-    #model = User
-    #fields = ['username']
-    #success_url = reverse_lazy("rutina-login")
+class RutinaSignUp(CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy("rutina-login")
+    template_name = "registration/signup.html"
+    
+class ProfileUpdate(UpdateView):
+    model = UserCreationForm
+    fields = ['username']
+    success_url = reverse_lazy("rutina-login")
 
 class ListRutina(LoginRequiredMixin,ListView):
    model= Rutina
@@ -38,8 +44,9 @@ class CreateRutina(CreateView):
     model= Rutina
     fields= ['nombre_rutina', 'short_content', 'content','image_rutina']
     success_url = reverse_lazy("lista-de-rutina")
-    
-class SearchRutinaByName(ListView):
+
+
+class SearchRutinaByName(LoginRequiredMixin,ListView):
     def get_queryset(self):
         rutina_nombre_rutina = self.request.GET.get('rutina_nombre_rutina')
         return Rutina.objects.filter(nombre_rutina__icontains=rutina_nombre_rutina)

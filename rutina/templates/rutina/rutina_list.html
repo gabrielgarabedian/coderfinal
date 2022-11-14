@@ -6,16 +6,46 @@ Rutinas
 {% endblock titulo %}
 
 {% block contenido %}
-    {% for rutina in object_list %}
-        <li>{{rutina}} 
-            <a href="{% url 'delete-rutina' rutina.id  %}">-Borrar-</a>
-            <a href="{% url 'update-rutina' rutina.id  %}">-Actulizar-</a>
-           
-        </li>
-    {% endfor %}
-    </ul>
-    
 
-    <a href="{% url 'crear-rutina'%}">Crear una nueva Rutina de entrenamiento</a>
+<div class="container">
+    {% if user.is_authenticated %}
+        <a href="{% url 'crear-rutina'%}"> Create new routine </a>
+        <a>  -   </a>
+        <a href="{% url 'profile-update' user.id %}"> To Update </a>
+        <a>  -   </a>
+        <a href="{% url 'rutina-logout'%}"> Exit </a>
+        
+    {% else %}
+        <a href="{% url 'rutina-login'%}"> Login </a>
+    
+    {% endif %}
+
+    <table class ="table">
+        <tr>
+            <th>Numero</th>
+            <th>Rutina</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+
+
+        {% for rutina in object_list %}
+            <tr>
+                <td>{{rutina.id}}</td>
+                <td>{{rutina.nombre_rutina}}</td>
+                <td>{{rutina.date_published}}</td>
+                <td>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'delete-rutina' rutina.id  %}">-Borrar-</a>
+                        <a href="{% url 'update-rutina' rutina.id  %}">-Actulizar-</a>
+                    {% endif %}
+                        <a href="{% url 'detail-rutina' rutina.id  %}">-ver-</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    
+</div>
+    
 
     {% endblock contenido %}
