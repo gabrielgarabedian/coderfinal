@@ -1,5 +1,5 @@
-# coderfinal
-_
+
+
 # Proyecto Final - GYM carrey
 ## Integrantes:
    - Gabriel Garabedian
@@ -10,10 +10,12 @@ _
 El proyecto simula una plataforma online inspirada en las grandes cadenas, donde podremos permitir al staff crear rutinas y a su vez al usuario poder tenerlas en sus móviles para poder ver las rutinas, horarios del gym, etc.
 
 
+
 Cosas que se pueden hacer:
 
 - Se puede crear, actualizar y borrar publicaciones de rutina, siendo profe logueado con permisos por ser staff del gym.
 - Un usuario sin registrar puede solo ver una sola rutina y al volver a la lista, se le solicita que se registre para ver toda la lista
+
 
 - ✨Podemos ver el horario y dias de apertura, que puede modificarse desde el admin.
 
@@ -24,6 +26,7 @@ Para ello se debe primero checkear la version de Python.
 El proyecto fue realizado sobre Python 3.10.6 , por lo que se sugiere utilizar este o una version superior
 
 Para ello debemos poner en windos en el CMD :
+
 
 - C:\> py --version
 
@@ -74,7 +77,6 @@ ahora Hace click en el siguiente link para ver el server corriendo:
  ```sh
 127.0.0.1:8000
 ```
-
 
 
 
