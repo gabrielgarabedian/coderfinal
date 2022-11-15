@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'ejemplo.apps.EjemploConfig',
     'blog.apps.BlogConfig',
     'panel_familia.apps.PanelFamiliaConfig',
-    'tienda.apps.TiendaConfig',
-    'rutina.apps.RutinaConfig'
+    'rutina.apps.RutinaConfig',
     
     
 ]
