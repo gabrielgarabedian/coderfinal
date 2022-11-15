@@ -7,10 +7,10 @@ class Configuracion(models.Model):
     
 
 class Rutina(models.Model):
-    nombre_rutina= models.CharField(max_length=50)
-    short_content= models.CharField(max_length=70)
+    nombre_rutina= models.CharField(max_length=454)
+    short_content= models.CharField(max_length=454)
     content= models.TextField(max_length=5000)
-    image_rutina = models.ImageField(upload_to="post", null=True, blank=True)
+    image_rutina = models.ImageField(upload_to="rutina", null=True, blank=True)
     date_published= models.DateTimeField(auto_now_add=True)
 
 

@@ -13,8 +13,9 @@
             <!-- Featured blog post-->
             <div class="card mb-4">
                 {% if  rutinas.0 %}
-                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.0.image_rutina.url }}" alt="..." /></a>
+                <a href="#!" ></a><img class="card-img-top" style="max-width:100%;" class="card-img-top" src="{{ rutina.0.image_rutina.url }}" alt="..." /></a>
                 <div class="card-body">
+                    <h1 class="card-image">{{rutina.0.image}}</h1>
                     <div class="small text-muted">{{rutina.0.date_published}}</div>
                     <h2 class="card-title">{{rutina.0.nombre_rutina}}</h2>
                     <p class="card-text">{{rutina.0.short_content}}</p>
