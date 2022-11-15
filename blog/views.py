@@ -10,17 +10,20 @@ from django.views import View
 from django.views.generic import ListView , CreateView, DeleteView, UpdateView, DetailView
 from blog.models import Post
 
-@login_required
+#@login_required
+#def index(request):
+#    configuracion = Configuracion.objects.first()
+#    return render(request, 'blog/index.html',{'configuracion':configuracion})
 def index(request):
-    configuracion = Configuracion.objects.first()
-    return render(request, 'blog/index.html',{'configuracion':configuracion})
+    posts = Post.objects.order_by('-date_published').all()
+    return render(request, 'blog/index.html', {"posts": posts})
 
 class SearchPostByName(ListView):
     def get_queryset(self):
         post_title = self.request.GET.get('post-title')
         return Post.objects.filter(title__icontains=post_title)
     
-class ListPost(LoginRequiredMixin,ListView):
+class ListPost(ListView):
     model=Post
     
 class BlogLogin(LoginView):
