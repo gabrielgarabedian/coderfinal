@@ -8,6 +8,7 @@ from django.views.generic import ListView , CreateView, DeleteView, UpdateView, 
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from rutina.models import Rutina, Configuracion, Grilla
+from django.contrib.auth.admin import User
 
 #def index(request):
 
@@ -32,15 +33,15 @@ class RutinaSignUp(CreateView):
     success_url = reverse_lazy("rutina-login")
     template_name = "registration/signup.html"
     
-class ProfileUpdate(UpdateView):
-    model = UserCreationForm
-    fields = ['username']
-    success_url = reverse_lazy("rutina-login")
+class RutinaProfileUpdate(LoginRequiredMixin,UpdateView):
+    model = User
+    fields = ['username', 'first_name', 'last_name', 'email']
+    success_url = reverse_lazy("index-rutina")
 
 class ListRutina(LoginRequiredMixin,ListView):
    model= Rutina
     
-class CreateRutina(CreateView):
+class CreateRutina(LoginRequiredMixin,CreateView):
     model= Rutina
     fields= ['nombre_rutina', 'short_content', 'content','image_rutina']
     success_url = reverse_lazy("lista-de-rutina")
@@ -54,11 +55,11 @@ class SearchRutinaByName(ListView):
 class DetailRutina(DetailView):
     model=Rutina
 
-class DeleteRutina(DeleteView):
+class DeleteRutina(LoginRequiredMixin,DeleteView):
     model=Rutina
     success_url = reverse_lazy("lista-de-rutina")
 
-class UpdateRutina(UpdateView):
+class UpdateRutina(LoginRequiredMixin,UpdateView):
     model=Rutina
     fields=['nombre_rutina', 'short_content', 'content']
     success_url = reverse_lazy("lista-de-rutina")

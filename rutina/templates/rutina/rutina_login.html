@@ -8,10 +8,26 @@ Login
 {% block contenido %}
 
 <h1>GYM Carrey - Ingreso al sitio</h1>
+{% if user.is_authenticated %}
+<br></br>
+<h2>Hola, ingresaste como {{ user.username }}.</h2>
+<br></br>
+<a href="{% url 'index-rutina' %}">-Inicio-</a>
+<br></br>
+<br></br>
+<a href="{% url 'rutina-logout' %}"> <button type="submit">Cerrar Sesion</button></a>
 
+
+{% else %}
+<h3>Iniciar sesión</h3>
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit">Ingresar</button>
+    <button type="submit">Login</button>
 </form>
+<br></br>
+        <P>¿No tienes cuenta?</P>
+        <a href="{% url 'rutina-signup' %}">Registrar usuario</a>
+    {% endif %}
+    
 {% endblock contenido %}
