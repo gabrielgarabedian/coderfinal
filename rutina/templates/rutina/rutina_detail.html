@@ -6,6 +6,12 @@
 {% endblock titulo %}
 
 {% block contenido %}
+<div class="container">
+    <div class="text-center my-5">
+        <h1 class="fw-bolder">GYM Carrey</h1>
+        <p class="lead mb-0">Rutinas</p>
+    </div>
+</div>
 <div class="d-flex justify-content-center">
     <h1>{{object.nombre_rutina}}</h1>
 </div>
@@ -31,7 +37,7 @@
             <a href="{% url 'lista-de-rutina' %}">Volver </a>
             
         {% else %}
-            <a href="{% url 'rutina-signup' %}">Volver </a>
+            <a href="{% url 'rutinas-post' %}">Volver </a>
         {% endif %}
     
         

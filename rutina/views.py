@@ -14,12 +14,12 @@ from django.contrib.auth.admin import User
 
     #return render(request, 'rutina/index.html')
 
-@login_required
+
 def index(request):
     configuracion = Configuracion.objects.first()
     return render(request, 'rutina/index.html',{'configuracion':configuracion})
 
-    
+   
 class RutinaLogin(LoginView):
     template_name = 'rutina/rutina_login.html'
     next_page = reverse_lazy("lista-de-rutina")
@@ -36,10 +36,11 @@ class RutinaSignUp(CreateView):
 class RutinaProfileUpdate(LoginRequiredMixin,UpdateView):
     model = User
     fields = ['username', 'first_name', 'last_name', 'email']
-    success_url = reverse_lazy("index-rutina")
+    success_url = reverse_lazy("rutinas-post")
 
 class ListRutina(LoginRequiredMixin,ListView):
    model= Rutina
+   paginate_by = 2
     
 class CreateRutina(LoginRequiredMixin,CreateView):
     model= Rutina
