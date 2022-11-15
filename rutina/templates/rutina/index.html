@@ -21,12 +21,12 @@
                 <div class="sidebar-heading border-bottom bg-light">{% block nombre_del_lugar %} GYM Carrey {% endblock nombre_del_lugar %}</div>
                 <div class="list-group list-group-flush">   
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{%url 'rutina-login' %}">{% block boton_1 %} Login {% endblock boton_1 %}</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{%url 'rutina-logout' %}">{% block boton_2 %} Logout {% endblock boton_2 %}</a>
+                    {% if user.is_authenticated %}
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'profile-update' user.id %}">{% block boton_2 %} Perfil {% endblock boton_2 %}</a>
+                    {% endif %}
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'horarios' %}">{% block boton_3 %} Horarios {% endblock boton_3 %}</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'rutinas-post' %}">{% block boton_4%} Rutinas {% endblock boton_4 %}</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% block boton_5 %} Alimentacion {% endblock boton_5 %}</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% block boton_6 %} Perfil {% endblock boton_6 %}</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{% block boton_7 %} Clientes {% endblock boton_7 %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="">{% block boton_5 %} Staff {% endblock boton_5 %}</a>
                 </div>  
             </div>
             {% endblock menu %}

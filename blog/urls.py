@@ -13,5 +13,5 @@ urlpatterns = [
     path('login/', BlogLogin.as_view(), name="blog-login"),
     path('logout/', BlogLogout.as_view(), name="blog-logout"),
     path('signup/', BlogSignUp.as_view(), name="blog-signup"),
-    path('user-profile/<int:pk>', ProfileUpdate.as_view(), name="profile-update"),
+    path('user-profile/<int:pk>', ProfileUpdate.as_view(), name="profile-updates"),
 ]
