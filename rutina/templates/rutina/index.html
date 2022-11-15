@@ -26,7 +26,7 @@
                     {% endif %}
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'horarios' %}">{% block boton_3 %} Horarios {% endblock boton_3 %}</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'rutinas-post' %}">{% block boton_4%} Rutinas {% endblock boton_4 %}</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="">{% block boton_5 %} Staff {% endblock boton_5 %}</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'staff' %}">{% block boton_5 %} Staff {% endblock boton_5 %}</a>
                 </div>  
             </div>
             {% endblock menu %}
@@ -34,9 +34,7 @@
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Menu</button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="container-fluid">             
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                                 <li class="nav-item active"><a class="nav-link" href="{% url 'nosotros' %}">{% block boton_cabecera_1 %} Nosotros {% endblock boton_cabecera_1%}</a></li>
@@ -51,11 +49,13 @@
                 <div class="container-fluid">
                     {% endblock base %}
                     {% block contenido %}
-                    <h1 class="mt-4">GYM Carrey</h1>
-                    <p>solución integral que te facilitan los horarios de atencion, rutinas de entrenamiento, planes de alimentacion y el control de socios de forma rápida e intuitiva. Sin complicaciones y con la mejor experiencia para tus clientes.</p>
-                    <p>
+                    <h1 class="mt-4">--GYM Carrey--</h1>
+                    <p></p>
+                    <h2>solución integral que te facilitan los horarios de atencion, rutinas de entrenamiento, planes de alimentacion y el control de socios de forma rápida e intuitiva. Sin complicaciones y con la mejor experiencia para tus clientes.</h2>
+                    <h3>
                         Entrenar y la salud van de la mano.
-                    </p>
+                    </h3>
+                    <p>Todas las rutinas en un solo lugar, las veces que quieras</p>
                 </div>
             </div>
         </div>

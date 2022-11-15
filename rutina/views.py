@@ -7,7 +7,7 @@ from django.views import View
 from django.views.generic import ListView , CreateView, DeleteView, UpdateView, DetailView
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from rutina.models import Rutina, Configuracion, Grilla
+from rutina.models import Rutina, Configuracion, Grilla,Staff
 from django.contrib.auth.admin import User
 
 #def index(request):
@@ -62,7 +62,7 @@ class DeleteRutina(LoginRequiredMixin,DeleteView):
 
 class UpdateRutina(LoginRequiredMixin,UpdateView):
     model=Rutina
-    fields=['nombre_rutina', 'short_content', 'content']
+    fields=['nombre_rutina', 'short_content', 'content','image_rutina']
     success_url = reverse_lazy("lista-de-rutina")
 
 def horarios(request):
@@ -78,7 +78,9 @@ def rutinas_post(request):
 
     return render(request, 'rutina/rutinas_post.html', {"rutina": rutinas})
 
-
+def staff(request):
+    staff = Staff.objects.first()
+    return render(request, 'rutina/staff_conf.html',{'staff':staff})
 
 
 

@@ -6,7 +6,7 @@ Rutinas
 {% endblock titulo %}
 
 {% block contenido %}
-
+<h1 class="mt-4">Lista de rutinas</h1>
 <div class="container">
     {% if user.is_authenticated %}
         <a href="{% url 'crear-rutina'%}"> Crear nueva rutina </a>
