@@ -16,6 +16,7 @@ urlpatterns = [
      path('search-by-name-rutina/', SearchRutinaByName.as_view(), name="search-by-name-rutina"),
      path('signup/', RutinaSignUp.as_view(), name="rutina-signup"),
      path('user-profile/<int:pk>', RutinaProfileUpdate.as_view(), name="profile-update"),
+     path('staff/',staff,name="staff"),
 
     
  

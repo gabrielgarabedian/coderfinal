@@ -11,7 +11,7 @@ class Rutina(models.Model):
     nombre_rutina= models.CharField(max_length=50)
     short_content= models.CharField(max_length=70)
     content= models.TextField(max_length=5000)
-    image_rutina = models.ImageField(upload_to="post", null=True, blank=True)
+    image_rutina = models.ImageField(upload_to="rutinas", null=True, blank=True)
     date_published= models.DateTimeField(auto_now_add=True)
 
 
@@ -23,7 +23,7 @@ class Alimentacion(models.Model):#creada para un futuro
     title= models.CharField(max_length=50)
     creador=models.CharField(max_length=70)
     contenido= models.TextField(max_length=5000)
-    image_rutina = models.ImageField(upload_to="rutinas", null=True, blank=True)
+    image_rutina = models.ImageField(upload_to="post", null=True, blank=True)
     date_published= models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
@@ -33,5 +33,11 @@ class Grilla(models.Model):
     dias_de=models.CharField(max_length=50, default="Lunes a Sabados")
     horario_de=models.CharField(max_length=40, default="de 8 a 22hs")
     feriados_de=models.CharField(max_length=50, default="9 a 20hs")
+    
+class Staff(models.Model):
+    nombre_staff= models.CharField(max_length=50,default='')
+    profe_de= models.CharField(max_length=50,default='')
+    
+    
 
 

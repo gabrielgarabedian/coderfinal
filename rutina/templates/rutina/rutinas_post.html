@@ -13,12 +13,12 @@
             <!-- Featured blog post-->
             <div class="card mb-4">
                 {% if  rutina.0 %}
-                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.0.image.url }}" alt="..." /></a>
+                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.0.image_rutina.url }}" alt="..." /></a>
                 <div class="card-body">
                     <div class="small text-muted">{{rutina.0.date_published}}</div>
                     <h2 class="card-title">{{rutina.0.nombre_rutina}}</h2>
                     <p class="card-text">{{rutina.0.short_content}}</p>
-                    <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.0.id %}">Leer más →</a>
+                    <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.0.id %}">Leer rutina →</a>
                 </div>
                 {% endif %}
             </div>
@@ -28,24 +28,24 @@
                     <!-- Blog post-->
                     {% if rutina.1 %}
                     <div class="card mb-4">
-                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.1.image.url }}" alt="..." /></a>
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.1.image_rutina.url }}" alt="..." /></a>
                         <div class="card-body">
                             <div class="small text-muted">{{rutina.1.date_published}}</div>
                             <h2 class="card-title">{{rutina.1.nombre_rutina}}</h2>
                             <p class="card-text">{{rutina.1.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.1.id %}">Leer más →</a>
+                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.1.id %}">Leer rutina →</a>
                         </div>
                     </div>
                     {% endif %}
                     <!-- Blog post-->
                     <div class="card mb-4">
                     {% if rutina.2 %}
-                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.2.image.url }}" alt="..." /></a>
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.2.image_rutina.url }}" alt="..." /></a>
                         <div class="card-body">
                             <div class="small text-muted">{{rutina.2.date_published}}</div>
                             <h2 class="card-title">{{rutina.2.nombre_rutina}}</h2>
                             <p class="card-text">{{rutina.2.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.2.id %}">Leer más →</a>
+                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.2.id %}">Leer rutina →</a>
                         </div>
                     </div>
                     {% endif %}
@@ -54,24 +54,24 @@
                     {% if rutina.3 %}
                     <!-- Blog post-->
                     <div class="card mb-4">
-                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.3.image.url }}" alt="..." /></a>
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.3.image_rutina.url }}" alt="..." /></a>
                         <div class="card-body">
                             <div class="small text-muted">{{rutina.3.date_published}}</div>
                             <h2 class="card-title">{{rutina.3.nombre_rutina}}</h2>
                             <p class="card-text">{{rutina.3.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.3.id %}">Leer más →</a>
+                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.3.id %}">Leer rutina →</a>
                         </div>
                     </div>
                     {% endif %}
                     <!-- Blog post-->
                     <div class="card mb-4">
                         {% if rutina.4 %}
-                                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.4.image.url }}" alt="..." /></a>
+                                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ rutina.4.image_rutina.url }}" alt="..." /></a>
                         <div class="card-body">
                             <div class="small text-muted">{{rutina.4.date_published}}</div>
                             <h2 class="card-title">{{rutina.4.nombre_rutina}}</h2>
                             <p class="card-text">{{rutina.4.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.4.id %}">Leer más →</a>
+                            <a class="btn btn-primary" href="{% url 'detail-rutina' rutina.4.id %}">Leer rutina →</a>
                         </div>
                         {% endif %}
                     </div>
