@@ -1,4 +1,6 @@
 # Proyecto Final - GYM carrey
+- video : https://youtu.be/f4p_GtsxKpE
+
 ## Integrantes:
 
    - Gabriel Garabedian
@@ -74,6 +76,10 @@ ahora Hace click en el siguiente link para ver el server corriendo:
  ```sh
 127.0.0.1:8000
 ```
+
+
+
+
 
 
 
